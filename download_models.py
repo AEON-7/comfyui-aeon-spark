@@ -150,6 +150,24 @@ PRIMARY_FILES: list[tuple] = [
         "loras",
         "LTX 2.3 distilled LoRA-384 (canonical 8-step distilled LoRA, 7.6GB)",
     ),
+    # VBVR Physics LoRA — required by movie_maker_fast.py fast/quality modes.
+    # Place in ltx2/ subdirectory. ComfyUI registers as: ltx2/Ltx2.3-Licon-VBVR-I2V-96000-R32.safetensors
+    # HuggingFace: https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V
+    (
+        "LiconStudio/Ltx2.3-VBVR-lora-I2V",
+        "Ltx2.3-Licon-VBVR-I2V-96000-R32.safetensors",
+        "loras/ltx2",
+        "LTX 2.3 VBVR Physics LoRA (enhances motion dynamics and temporal consistency, 2.9GB)",
+    ),
+    # IC-LoRA Union Control — required by movie_maker_fast.py fast/quality modes.
+    # Enables reference-based video-to-video control.
+    # HuggingFace: https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control
+    (
+        "Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control",
+        "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+        "loras",
+        "LTX 2.3 IC-LoRA Union Control (reference-based video-to-video control, 3.5GB)",
+    ),
     (
         "Lightricks/LTX-2.3",
         "ltx-2.3-spatial-upscaler-x2-1.1.safetensors",
